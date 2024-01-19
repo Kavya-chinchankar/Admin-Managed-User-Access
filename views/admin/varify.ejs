@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varify</title>
+</head>
+<body>
+
+    <h1>Varify</h1>
+
+    <form action="" method="post">
+        <label for="">Varified</label>
+        <input type="radio" name="verify" id="" value="1" <% if(user.is_varified == 1){ %> checked <% } %> >
+        <!-- <input type="checkbox" name="verify" value="1" <% if(user.is_varified==1){ %> click <% } %>> -->
+
+        <label for="">Not Varified</label>
+        <input type="radio" name="verify" id="" value="0" <% if(user.is_varified == 0){ %> checked <% } %> ><br><br>
+
+        <input type="hidden" name="id" value="<%= user._id %>"><br>
+
+        <input type="submit" value="UPDATE" >
+    
+    </form>
+
+    <a href="/admin/home/dashboard">Go To Home</a>
+    
+    
+</body>
+</html>
